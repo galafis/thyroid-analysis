@@ -1,7 +1,7 @@
 # Análise Avançada de Dados de Tireoide com Machine Learning
 # Advanced Thyroid Data Analysis with Machine Learning
 
-![Thyroid Analysis with Machine Learning](thyroid_ml_visualization.png)
+![Thyroid Analysis with Machine Learning](thyroid_ml_visualization_new.png)
 
 [English version below](#english-version)
 
@@ -26,7 +26,7 @@ O objetivo principal é construir um classificador preciso e interpretável que 
 - **Interpretabilidade de modelos** com SHAP e LIME
 - **Interface para uso clínico** do modelo treinado
 
-![Comparação de Algoritmos](ml_algorithms_comparison.png)
+![Comparação de Algoritmos](ml_algorithms_comparison_new.png)
 
 ## Estrutura do Projeto
 
@@ -39,7 +39,7 @@ O objetivo principal é construir um classificador preciso e interpretável que 
 
 O projeto alcançou uma acurácia superior a 99% na classificação de hipotireoidismo, com alta precisão e recall. Além disso, foram identificadas as variáveis mais importantes para o diagnóstico, como TSH, T4 e T3.
 
-![Interpretabilidade de Modelos](model_interpretability.png)
+![Interpretabilidade de Modelos](model_interpretability_new.png)
 
 ## Tecnologias Utilizadas
 
