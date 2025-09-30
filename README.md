@@ -34,6 +34,11 @@ O objetivo principal é construir um classificador preciso e interpretável que 
 - `thyroid_balanced_cleaned.csv`: Dataset balanceado com dados de tireoide
 - `thyroid_enhanced_cleaned.csv`: Dataset aprimorado com features adicionais
 - `thyroid_classifier_optimized.pkl`: Modelo treinado e otimizado
+- `update_graph_colors.py`: Script auxiliar para atualizar cores dos gráficos com melhor contraste visual
+
+### Nota sobre as Imagens
+
+O repositório contém versões duplicadas de alguns arquivos de imagem (com e sem o sufixo `_new`). As imagens com sufixo `_new` (`thyroid_ml_visualization_new.png`, `ml_algorithms_comparison_new.png`, `model_interpretability_new.png`) representam versões otimizadas com cores mais contrastantes e melhor diferenciação visual, desenvolvidas para facilitar a interpretação dos gráficos. Recomendamos o uso das versões `_new`, sendo as versões antigas mantidas temporariamente para referência histórica e previstas para remoção em futuras atualizações.
 
 ## Resultados
 
@@ -72,7 +77,6 @@ Este projeto está licenciado sob a licença MIT - veja o arquivo LICENSE para m
 
 ---
 
-<a name="english-version"></a>
 # Advanced Thyroid Data Analysis with Machine Learning
 
 ## About the Project
@@ -102,6 +106,11 @@ The main objective is to build an accurate and interpretable classifier that can
 - `thyroid_balanced_cleaned.csv`: Balanced dataset with thyroid data
 - `thyroid_enhanced_cleaned.csv`: Enhanced dataset with additional features
 - `thyroid_classifier_optimized.pkl`: Trained and optimized model
+- `update_graph_colors.py`: Auxiliary script to update graph colors with improved visual contrast
+
+### Note on Images
+
+The repository contains duplicate versions of some image files (with and without the `_new` suffix). Images with the `_new` suffix (`thyroid_ml_visualization_new.png`, `ml_algorithms_comparison_new.png`, `model_interpretability_new.png`) represent optimized versions with more contrasting colors and better visual differentiation, developed to facilitate graph interpretation. We recommend using the `_new` versions, with the old versions temporarily maintained for historical reference and scheduled for removal in future updates.
 
 ## Results
 
@@ -135,4 +144,3 @@ Gabriel Lafis - [GitHub](https://github.com/galafis)
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
-
