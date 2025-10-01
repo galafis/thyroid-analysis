@@ -1,40 +1,40 @@
-
 ```mermaid
 graph TD
-    A[Dados Brutos] --> B(Pré-processamento)
-    B --> C{Seleção de Features}
-    C --> D[Modelos de Machine Learning]
-    D --> E(Avaliação de Modelos)
-    E --> F[Interpretabilidade de Modelos]
-    F --> G[Visualização de Resultados]
-    G --> H[Relatório/Dashboard]
+    A[Dados Brutos] --> B{Pré-processamento de Dados}
+    B --> C{Divisão Treino/Teste}
+    C --> D[Treinamento do Modelo]
+    D --> E[Avaliação do Modelo]
+    E --> F[Artefatos Salvos]
+    F --> G[Previsões e Inferência]
 
-    subgraph Repositório
-        direction LR
-        src[src/] --> src_data[src/data/]
-        src --> src_scripts[src/scripts/]
-        tests[tests/] --> test_files[test_*.py]
-        docs[docs/] --> docs_images[docs/images/]
-        docs --> docs_diagrams[docs/diagrams/]
-        config[config/] --> config_files[config/*.txt]
+    subgraph "src/data"
+        A
     end
 
-    src_data --> A
-    src_scripts --> D
-    test_files --> D
-    docs_images --> G
-    docs_diagrams --> G
-    config_files --> B
+    subgraph "src/processing"
+        B
+        C
+        D
+        E
+    end
+
+    subgraph "src/models"
+        F
+    end
+
+    subgraph "src/visualization"
+        H[Visualização de Resultados]
+    end
+
+    E --> H
+    G --> H
 
     style A fill:#f9f,stroke:#333,stroke-width:2px
     style B fill:#bbf,stroke:#333,stroke-width:2px
-    style C fill:#fcf,stroke:#333,stroke-width:2px
-    style D fill:#ccf,stroke:#333,stroke-width:2px
-    style E fill:#f9f,stroke:#333,stroke-width:2px
-    style F fill:#bbf,stroke:#333,stroke-width:2px
-    style G fill:#fcf,stroke:#333,stroke-width:2px
-    style H fill:#ccf,stroke:#333,stroke-width:2px
+    style C fill:#bbf,stroke:#333,stroke-width:2px
+    style D fill:#bbf,stroke:#333,stroke-width:2px
+    style E fill:#bbf,stroke:#333,stroke-width:2px
+    style F fill:#f9f,stroke:#333,stroke-width:2px
+    style G fill:#bbf,stroke:#333,stroke-width:2px
+    style H fill:#f9f,stroke:#333,stroke-width:2px
 ```
-```
-```
-

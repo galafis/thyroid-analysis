@@ -18,8 +18,6 @@ A estrutura do repositório foi organizada para facilitar a navegação e a comp
 
 ```
 thyroid-analysis/
-├── config/                 # Arquivos de configuração e dependências
-│   └── requirements.txt    # Dependências do projeto
 ├── docs/                   # Documentação adicional, imagens e diagramas
 │   ├── images/             # Imagens e gráficos gerados
 │   │   ├── architecture_diagram.png
@@ -31,11 +29,18 @@ thyroid-analysis/
 │   ├── data/               # Conjuntos de dados utilizados
 │   │   ├── thyroid_balanced_cleaned.csv
 │   │   └── thyroid_enhanced_cleaned.csv
-│   └── update_graph_colors.py # Script para geração e atualização de gráficos
+│   ├── models/             # Modelos treinados e artefatos
+│   ├── processing/         # Scripts de pré-processamento e treinamento de modelo
+│   │   └── thyroid_analysis.py
+│   ├── utils/              # Utilitários gerais
+│   └── visualization/      # Scripts de visualização
+│       └── update_graph_colors.py
 ├── tests/                  # Testes unitários
-│   └── test_update_graph_colors.py # Testes para o script de gráficos
+│   ├── test_update_graph_colors.py # Testes para o script de gráficos
+│   └── test_thyroid_analysis.py    # Testes para o script de análise da tireoide
 ├── .gitignore              # Arquivos e diretórios a serem ignorados pelo Git
 ├── LICENSE                 # Informações de licenciamento do projeto
+├── requirements.txt        # Dependências do projeto
 └── README.md               # Este arquivo (documentação principal)
 ```
 
@@ -71,7 +76,7 @@ cd thyroid-analysis
 ```bash
 python3 -m venv venv
 source venv/bin/activate  # No Windows: .\venv\Scripts\activate
-pip install -r config/requirements.txt
+pip install -r requirements.txt
 ```
 
 ### 3. Gerar Gráficos
@@ -125,8 +130,6 @@ The repository structure has been organized to facilitate navigation and underst
 
 ```
 thyroid-analysis/
-├── config/                 # Configuration files and dependencies
-│   └── requirements.txt    # Project dependencies
 ├── docs/                   # Additional documentation, images, and diagrams
 │   ├── images/             # Generated images and graphs
 │   │   ├── architecture_diagram.png
@@ -138,11 +141,18 @@ thyroid-analysis/
 │   ├── data/               # Datasets used
 │   │   ├── thyroid_balanced_cleaned.csv
 │   │   └── thyroid_enhanced_cleaned.csv
-│   └── update_graph_colors.py # Script for generating and updating graphs
+│   ├── models/             # Trained models and artifacts
+│   ├── processing/         # Preprocessing and model training scripts
+│   │   └── thyroid_analysis.py
+│   ├── utils/              # General utilities
+│   └── visualization/      # Visualization scripts
+│       └── update_graph_colors.py
 ├── tests/                  # Unit tests
-│   └── test_update_graph_colors.py # Tests for the graph generation script
+│   ├── test_update_graph_colors.py # Tests for the graph generation script
+│   └── test_thyroid_analysis.py    # Tests for the thyroid analysis script
 ├── .gitignore              # Files and directories to be ignored by Git
 ├── LICENSE                 # Project licensing information
+├── requirements.txt        # Project dependencies
 └── README.md               # This file (main documentation)
 ```
 
@@ -178,7 +188,7 @@ It is highly recommended to use a virtual environment to manage dependencies:
 ```bash
 python3 -m venv venv
 source venv/bin/activate  # On Windows: .\venv\Scripts\activate
-pip install -r config/requirements.txt
+pip install -r requirements.txt
 ```
 
 ### 3. Generate Graphs

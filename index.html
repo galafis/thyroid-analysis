@@ -72,15 +72,20 @@ cd thyroid-analysis</code></pre>
         <p>É altamente recomendável usar um ambiente virtual para gerenciar as dependências:</p>
         <pre><code>python3 -m venv venv
 source venv/bin/activate  # No Windows: .\venv\Scripts\activate
-pip install -r config/requirements.txt</code></pre>
+pip install -r requirements.txt</code></pre>
 
         <h3>3. Gerar Gráficos</h3>
         <p>O script <code>update_graph_colors.py</code> gera os gráficos de comparação de algoritmos, interpretabilidade e visualização ML. Para executá-lo:</p>
-        <pre><code>python3 src/update_graph_colors.py</code></pre>
+        <pre><code>python3 src/visualization/update_graph_colors.py</code></pre>
 
-        <h3>4. Executar Testes</h3>
-        <p>Para garantir a funcionalidade do script de geração de gráficos, execute os testes unitários:</p>
-        <pre><code>python3 -m unittest tests/test_update_graph_colors.py</code></pre>
+        <h3>4. Executar Análise de Tireoide</h3>
+        <p>Para executar o pipeline completo de análise de tireoide (pré-processamento, treinamento e avaliação do modelo):</p>
+        <pre><code>python3 src/processing/thyroid_analysis.py</code></pre>
+
+        <h3>5. Executar Testes</h3>
+        <p>Para garantir a funcionalidade dos scripts, execute os testes unitários:</p>
+        <pre><code>python3 -m unittest tests/test_update_graph_colors.py
+python3 -m unittest tests/test_thyroid_analysis.py</code></pre>
 
         <h2>Autor</h2>
         <p><strong>Gabriel Demetrios Lafis</strong></p>

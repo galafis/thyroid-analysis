@@ -5,7 +5,8 @@ import sys
 from unittest.mock import patch, MagicMock
 
 # Adicionar o diretório src ao PATH para que o script possa ser importado
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../src')))
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../src/visualization')))
+
 
 from update_graph_colors import (
     gerar_grafico_comparacao_algoritmos,
