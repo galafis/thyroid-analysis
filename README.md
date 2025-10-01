@@ -1,146 +1,213 @@
-# Análise Avançada de Dados de Tireoide com Machine Learning
-# Advanced Thyroid Data Analysis with Machine Learning
 
-![Thyroid Analysis with Machine Learning](thyroid_ml_visualization_new.png)
+# Análise da Glândula Tireoide com Machine Learning
 
-[English version below](#english-version)
+![Imagem Hero](docs/images/thyroid_ml_visualization_new.png)
 
-## Sobre o Projeto
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python](https://img.shields.io/badge/Python-3.11%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
+[![Libraries](https://img.shields.io/badge/Libraries-Numpy%2C%20Pandas%2C%20Matplotlib%2C%20Seaborn%2C%20Scikit--learn%2C%20XGBoost%2C%20LightGBM%2C%20CatBoost%2C%20SHAP%2C%20LIME-orange)](https://pypi.org/)
+[![Tests](https://github.com/GabrielDemetriosLafis/thyroid-analysis/actions/workflows/python-test.yml/badge.svg)](https://github.com/GabrielDemetriosLafis/thyroid-analysis/actions/workflows/python-test.yml)
 
-Este projeto apresenta uma análise avançada de dados de tireoide utilizando técnicas de machine learning para classificação de hipotireoidismo. O trabalho foi desenvolvido como projeto final do curso de Ciência de Dados da EBAC (Escola Britânica de Artes Criativas e Tecnologia).
+## Visão Geral do Projeto
 
-O objetivo principal é construir um classificador preciso e interpretável que possa auxiliar no diagnóstico de doenças da tireoide, especificamente o hipotireoidismo, a partir de exames laboratoriais.
+Este repositório apresenta um estudo abrangente sobre a **análise da glândula tireoide utilizando técnicas de Machine Learning**. O objetivo principal é desenvolver e comparar modelos preditivos para a classificação de doenças da tireoide, bem como explorar a interpretabilidade desses modelos para entender os fatores que influenciam suas decisões. O projeto inclui pré-processamento de dados, treinamento de diversos algoritmos de ML e visualizações detalhadas dos resultados e da interpretabilidade do modelo.
 
-## Características Principais
+## Estrutura do Repositório
 
-- **Análise exploratória avançada** de dados de tireoide
-- **Comparação de múltiplos algoritmos** de machine learning:
-  - Random Forest
-  - XGBoost
-  - LightGBM
-  - CatBoost
-  - SVM
-  - Regressão Logística
-- **Técnicas de balanceamento de classes** utilizando SMOTE
-- **Otimização de hiperparâmetros** com validação cruzada
-- **Interpretabilidade de modelos** com SHAP e LIME
-- **Interface para uso clínico** do modelo treinado
+A estrutura do repositório foi organizada para facilitar a navegação e a compreensão do projeto:
 
-![Comparação de Algoritmos](ml_algorithms_comparison_new.png)
+```
+thyroid-analysis/
+├── config/                 # Arquivos de configuração e dependências
+│   └── requirements.txt    # Dependências do projeto
+├── docs/                   # Documentação adicional, imagens e diagramas
+│   ├── images/             # Imagens e gráficos gerados
+│   │   ├── architecture_diagram.png
+│   │   ├── ml_algorithms_comparison_new.png
+│   │   ├── model_interpretability_new.png
+│   │   └── thyroid_ml_visualization_new.png
+│   └── architecture_diagram.md # Diagrama de arquitetura em Mermaid
+├── src/                    # Código fonte do projeto
+│   ├── data/               # Conjuntos de dados utilizados
+│   │   ├── thyroid_balanced_cleaned.csv
+│   │   └── thyroid_enhanced_cleaned.csv
+│   └── update_graph_colors.py # Script para geração e atualização de gráficos
+├── tests/                  # Testes unitários
+│   └── test_update_graph_colors.py # Testes para o script de gráficos
+├── .gitignore              # Arquivos e diretórios a serem ignorados pelo Git
+├── LICENSE                 # Informações de licenciamento do projeto
+└── README.md               # Este arquivo (documentação principal)
+```
 
-## Estrutura do Projeto
+## Diagrama de Arquitetura
 
-- `thyroid_analysis_enhanced.ipynb`: Notebook principal com a análise completa
-- `thyroid_balanced_cleaned.csv`: Dataset balanceado com dados de tireoide
-- `thyroid_enhanced_cleaned.csv`: Dataset aprimorado com features adicionais
-- `thyroid_classifier_optimized.pkl`: Modelo treinado e otimizado
-- `update_graph_colors.py`: Script auxiliar para atualizar cores dos gráficos com melhor contraste visual
+O diagrama abaixo ilustra a arquitetura geral do projeto, desde a ingestão de dados até a visualização dos resultados e a interpretabilidade dos modelos.
 
-### Nota sobre as Imagens
-
-O repositório contém versões duplicadas de alguns arquivos de imagem (com e sem o sufixo `_new`). As imagens com sufixo `_new` (`thyroid_ml_visualization_new.png`, `ml_algorithms_comparison_new.png`, `model_interpretability_new.png`) representam versões otimizadas com cores mais contrastantes e melhor diferenciação visual, desenvolvidas para facilitar a interpretação dos gráficos. Recomendamos o uso das versões `_new`, sendo as versões antigas mantidas temporariamente para referência histórica e previstas para remoção em futuras atualizações.
-
-## Resultados
-
-O projeto alcançou uma acurácia superior a 99% na classificação de hipotireoidismo, com alta precisão e recall. Além disso, foram identificadas as variáveis mais importantes para o diagnóstico, como TSH, T4 e T3.
-
-![Interpretabilidade de Modelos](model_interpretability_new.png)
+![Diagrama de Arquitetura](docs/images/architecture_diagram.png)
 
 ## Tecnologias Utilizadas
 
-- Python 3.x
-- Pandas, NumPy
-- Scikit-learn
-- XGBoost, LightGBM, CatBoost
-- SHAP, LIME
-- Matplotlib, Seaborn
+*   **Python 3.11+**
+*   **Bibliotecas de Data Science:** `Numpy`, `Pandas`, `Matplotlib`, `Seaborn`, `Scikit-learn`, `Imbalanced-learn`
+*   **Modelos de Machine Learning:** `XGBoost`, `LightGBM`, `CatBoost`
+*   **Interpretabilidade de Modelos:** `SHAP`, `LIME`
+*   **Visualização:** `Matplotlib`, `Seaborn`, `Mermaid`
 
-## Como Executar
+## Como Executar o Projeto
 
-1. Clone este repositório
-2. Instale as dependências:
-   ```
-   pip install -r requirements.txt
-   ```
-3. Execute o notebook Jupyter:
-   ```
-   jupyter notebook thyroid_analysis_enhanced.ipynb
-   ```
+Para configurar e executar este projeto localmente, siga os passos abaixo:
 
-## Autor
+### 1. Clonar o Repositório
 
-Gabriel Lafis - [GitHub](https://github.com/galafis)
+```bash
+git clone https://github.com/GabrielDemetriosLafis/thyroid-analysis.git
+cd thyroid-analysis
+```
+
+### 2. Instalar Dependências
+
+É altamente recomendável usar um ambiente virtual para gerenciar as dependências:
+
+```bash
+python3 -m venv venv
+source venv/bin/activate  # No Windows: .\venv\Scripts\activate
+pip install -r config/requirements.txt
+```
+
+### 3. Gerar Gráficos
+
+O script `update_graph_colors.py` gera os gráficos de comparação de algoritmos, interpretabilidade e visualização ML. Para executá-lo:
+
+```bash
+python3 src/update_graph_colors.py
+```
+
+Os gráficos gerados serão salvos na pasta `docs/images/`.
+
+### 4. Executar Testes
+
+Para garantir a funcionalidade do script de geração de gráficos, execute os testes unitários:
+
+```bash
+python3 -m unittest tests/test_update_graph_colors.py
+```
+
+## Contribuição
+
+Contribuições são bem-vindas! Por favor, leia o arquivo `CONTRIBUTING.md` para mais detalhes sobre como contribuir.
 
 ## Licença
 
-Este projeto está licenciado sob a licença MIT - veja o arquivo LICENSE para mais detalhes.
+Este projeto está licenciado sob a Licença MIT. Consulte o arquivo `LICENSE` para mais detalhes.
+
+## Autor
+
+**Gabriel Demetrios Lafis**
 
 ---
 
-# Advanced Thyroid Data Analysis with Machine Learning
+# Thyroid Gland Analysis with Machine Learning
 
-## About the Project
+![Hero Image](docs/images/thyroid_ml_visualization_new.png)
 
-This project presents an advanced analysis of thyroid data using machine learning techniques for hypothyroidism classification. The work was developed as a final project for the Data Science course at EBAC (British School of Creative Arts and Technology).
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python](https://img.shields.io/badge/Python-3.11%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
+[![Libraries](https://img.shields.io/badge/Libraries-Numpy%2C%20Pandas%2C%20Matplotlib%2C%20Seaborn%2C%20Scikit--learn%2C%20XGBoost%2C%20LightGBM%2C%20CatBoost%2C%20SHAP%2C%20LIME-orange)](https://pypi.org/)
+[![Tests](https://github.com/GabrielDemetriosLafis/thyroid-analysis/actions/workflows/python-test.yml/badge.svg)](https://github.com/GabrielDemetriosLafis/thyroid-analysis/actions/workflows/python-test.yml)
 
-The main objective is to build an accurate and interpretable classifier that can assist in the diagnosis of thyroid diseases, specifically hypothyroidism, based on laboratory tests.
+## Project Overview
 
-## Main Features
+This repository presents a comprehensive study on **thyroid gland analysis using Machine Learning techniques**. The main objective is to develop and compare predictive models for thyroid disease classification, as well as to explore the interpretability of these models to understand the factors influencing their decisions. The project includes data preprocessing, training of various ML algorithms, and detailed visualizations of results and model interpretability.
 
-- **Advanced exploratory analysis** of thyroid data
-- **Comparison of multiple machine learning algorithms**:
-  - Random Forest
-  - XGBoost
-  - LightGBM
-  - CatBoost
-  - SVM
-  - Logistic Regression
-- **Class balancing techniques** using SMOTE
-- **Hyperparameter optimization** with cross-validation
-- **Model interpretability** with SHAP and LIME
-- **Interface for clinical use** of the trained model
+## Repository Structure
 
-## Project Structure
+The repository structure has been organized to facilitate navigation and understanding of the project:
 
-- `thyroid_analysis_enhanced.ipynb`: Main notebook with complete analysis
-- `thyroid_balanced_cleaned.csv`: Balanced dataset with thyroid data
-- `thyroid_enhanced_cleaned.csv`: Enhanced dataset with additional features
-- `thyroid_classifier_optimized.pkl`: Trained and optimized model
-- `update_graph_colors.py`: Auxiliary script to update graph colors with improved visual contrast
+```
+thyroid-analysis/
+├── config/                 # Configuration files and dependencies
+│   └── requirements.txt    # Project dependencies
+├── docs/                   # Additional documentation, images, and diagrams
+│   ├── images/             # Generated images and graphs
+│   │   ├── architecture_diagram.png
+│   │   ├── ml_algorithms_comparison_new.png
+│   │   ├── model_interpretability_new.png
+│   │   └── thyroid_ml_visualization_new.png
+│   └── architecture_diagram.md # Architecture diagram in Mermaid
+├── src/                    # Project source code
+│   ├── data/               # Datasets used
+│   │   ├── thyroid_balanced_cleaned.csv
+│   │   └── thyroid_enhanced_cleaned.csv
+│   └── update_graph_colors.py # Script for generating and updating graphs
+├── tests/                  # Unit tests
+│   └── test_update_graph_colors.py # Tests for the graph generation script
+├── .gitignore              # Files and directories to be ignored by Git
+├── LICENSE                 # Project licensing information
+└── README.md               # This file (main documentation)
+```
 
-### Note on Images
+## Architecture Diagram
 
-The repository contains duplicate versions of some image files (with and without the `_new` suffix). Images with the `_new` suffix (`thyroid_ml_visualization_new.png`, `ml_algorithms_comparison_new.png`, `model_interpretability_new.png`) represent optimized versions with more contrasting colors and better visual differentiation, developed to facilitate graph interpretation. We recommend using the `_new` versions, with the old versions temporarily maintained for historical reference and scheduled for removal in future updates.
+The diagram below illustrates the overall project architecture, from data ingestion to results visualization and model interpretability.
 
-## Results
-
-The project achieved an accuracy of over 99% in hypothyroidism classification, with high precision and recall. Additionally, the most important variables for diagnosis were identified, such as TSH, T4, and T3.
+![Architecture Diagram](docs/images/architecture_diagram.png)
 
 ## Technologies Used
 
-- Python 3.x
-- Pandas, NumPy
-- Scikit-learn
-- XGBoost, LightGBM, CatBoost
-- SHAP, LIME
-- Matplotlib, Seaborn
+*   **Python 3.11+**
+*   **Data Science Libraries:** `Numpy`, `Pandas`, `Matplotlib`, `Seaborn`, `Scikit-learn`, `Imbalanced-learn`
+*   **Machine Learning Models:** `XGBoost`, `LightGBM`, `CatBoost`
+*   **Model Interpretability:** `SHAP`, `LIME`
+*   **Visualization:** `Matplotlib`, `Seaborn`, `Mermaid`
 
-## How to Run
+## How to Run the Project
 
-1. Clone this repository
-2. Install dependencies:
-   ```
-   pip install -r requirements.txt
-   ```
-3. Run the Jupyter notebook:
-   ```
-   jupyter notebook thyroid_analysis_enhanced.ipynb
-   ```
+To set up and run this project locally, follow the steps below:
 
-## Author
+### 1. Clone the Repository
 
-Gabriel Lafis - [GitHub](https://github.com/galafis)
+```bash
+git clone https://github.com/GabrielDemetriosLafis/thyroid-analysis.git
+cd thyroid-analysis
+```
+
+### 2. Install Dependencies
+
+It is highly recommended to use a virtual environment to manage dependencies:
+
+```bash
+python3 -m venv venv
+source venv/bin/activate  # On Windows: .\venv\Scripts\activate
+pip install -r config/requirements.txt
+```
+
+### 3. Generate Graphs
+
+The `update_graph_colors.py` script generates the algorithm comparison, interpretability, and ML visualization graphs. To run it:
+
+```bash
+python3 src/update_graph_colors.py
+```
+
+The generated graphs will be saved in the `docs/images/` folder.
+
+### 4. Run Tests
+
+To ensure the functionality of the graph generation script, run the unit tests:
+
+```bash
+python3 -m unittest tests/test_update_graph_colors.py
+```
+
+## Contribution
+
+Contributions are welcome! Please read the `CONTRIBUTING.md` file for more details on how to contribute.
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License. See the `LICENSE` file for more details.
+
+## Author
+
+**Gabriel Demetrios Lafis**
+

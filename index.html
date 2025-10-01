@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análise da Glândula Tireoide com Machine Learning</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        h1, h2, h3 {
+            color: #0056b3;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px 0;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Análise da Glândula Tireoide com Machine Learning</h1>
+        <p>Este projeto apresenta um estudo abrangente sobre a <strong>análise da glândula tireoide utilizando técnicas de Machine Learning</strong>. O objetivo principal é desenvolver e comparar modelos preditivos para a classificação de doenças da tireoide, bem como explorar a interpretabilidade desses modelos para entender os fatores que influenciam suas decisões. O projeto inclui pré-processamento de dados, treinamento de diversos algoritmos de ML e visualizações detalhadas dos resultados e da interpretabilidade do modelo.</p>
+        
+        <h2>Visão Geral</h2>
+        <img src="docs/images/thyroid_ml_visualization_new.png" alt="Imagem Hero">
+
+        <h2>Diagrama de Arquitetura</h2>
+        <p>O diagrama abaixo ilustra a arquitetura geral do projeto, desde a ingestão de dados até a visualização dos resultados e a interpretabilidade dos modelos.</p>
+        <img src="docs/images/architecture_diagram.png" alt="Diagrama de Arquitetura">
+
+        <h2>Tecnologias Utilizadas</h2>
+        <ul>
+            <li><strong>Python 3.11+</strong></li>
+            <li><strong>Bibliotecas de Data Science:</strong> <code>Numpy</code>, <code>Pandas</code>, <code>Matplotlib</code>, <code>Seaborn</code>, <code>Scikit-learn</code>, <code>Imbalanced-learn</code></li>
+            <li><strong>Modelos de Machine Learning:</strong> <code>XGBoost</code>, <code>LightGBM</code>, <code>CatBoost</code></li>
+            <li><strong>Interpretabilidade de Modelos:</strong> <code>SHAP</code>, <code>LIME</code></li>
+            <li><strong>Visualização:</strong> <code>Matplotlib</code>, <code>Seaborn</code>, <code>Mermaid</code></li>
+        </ul>
+
+        <h2>Como Executar o Projeto</h2>
+        <p>Para configurar e executar este projeto localmente, siga os passos abaixo:</p>
+        
+        <h3>1. Clonar o Repositório</h3>
+        <pre><code>git clone https://github.com/GabrielDemetriosLafis/thyroid-analysis.git
+cd thyroid-analysis</code></pre>
+
+        <h3>2. Instalar Dependências</h3>
+        <p>É altamente recomendável usar um ambiente virtual para gerenciar as dependências:</p>
+        <pre><code>python3 -m venv venv
+source venv/bin/activate  # No Windows: .\venv\Scripts\activate
+pip install -r config/requirements.txt</code></pre>
+
+        <h3>3. Gerar Gráficos</h3>
+        <p>O script <code>update_graph_colors.py</code> gera os gráficos de comparação de algoritmos, interpretabilidade e visualização ML. Para executá-lo:</p>
+        <pre><code>python3 src/update_graph_colors.py</code></pre>
+
+        <h3>4. Executar Testes</h3>
+        <p>Para garantir a funcionalidade do script de geração de gráficos, execute os testes unitários:</p>
+        <pre><code>python3 -m unittest tests/test_update_graph_colors.py</code></pre>
+
+        <h2>Autor</h2>
+        <p><strong>Gabriel Demetrios Lafis</strong></p>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 Gabriel Demetrios Lafis. Todos os direitos reservados.</p>
+    </div>
+</body>
+</html>
+
